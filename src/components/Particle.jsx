@@ -36,10 +36,10 @@ function Particle() {
                         },
                         "particles": {
                             "number": {
-                                "value": 355,
+                                "value": 400,
                                 "density": {
                                     "enable": true,
-                                    "value_area": 789.1476416322727
+                                    "value_area": 800
                                 }
                             },
                             "color": {
@@ -48,16 +48,16 @@ function Particle() {
                             "shape": {
                                 "type": "circle",
                                 "stroke": {
-                                    "width": 0,
+                                    "width": 10,
                                     "color": "#000000"
                                 },
                                 "polygon": {
-                                    "nb_sides": 5
+                                    "nb_sides": 10
                                 },
                                 "image": {
                                     "src": "img/github.svg",
-                                    "width": 100,
-                                    "height": 100
+                                    "width": 10,
+                                    "height": 10
                                 }
                             },
                             "opacity": {
@@ -89,7 +89,7 @@ function Particle() {
                             },
                             "move": {
                                 "enable": true,
-                                "speed": 0.2,
+                                "speed": 0.7,
                                 "direction": "none",
                                 "random": true,
                                 "straight": false,
@@ -107,19 +107,28 @@ function Particle() {
                             "events": {
                                 "onhover": {
                                     "enable": true,
-                                    "mode": "bubble"
+                                    "mode": "grab"
                                 },
                                 "onclick": {
                                     "enable": true,
-                                    "mode": "push"
+                                    "mode": "repulse"
                                 },
-                                "resize": true
+                                "resize": true,
+                                "onresize": {
+                                    "enable": true,
+                                    "density_auto": true,
+                                    "density_area": 800
+                                }
                             },
                             "modes": {
                                 "grab": {
-                                    "distance": 400,
+                                    "distance": 60,
                                     "line_linked": {
-                                        "opacity": 1
+                                        "opacity": 1,
+                                        "color": "#f3f",
+                                        "width": 10,
+                                        "enable": true,
+
                                     }
                                 },
                                 "bubble": {
@@ -134,10 +143,16 @@ function Particle() {
                                     "duration": 0.4
                                 },
                                 "push": {
-                                    "particles_nb": 4
+                                    "particles_nb": 10
                                 },
                                 "remove": {
                                     "particles_nb": 2
+                                },
+                                "attract": {
+                                    "rotateX": 600,
+                                    "rotateY": 1200
+
+
                                 }
                             }
                         },
