@@ -25,6 +25,7 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.3.0",
     "react-tsparticles": "^2.2.1",
+    "react-typed": "^1.2.0",
     "saas": "^1.0.0",
     "sass": "^1.54.4",
     "scss": "^0.2.4",

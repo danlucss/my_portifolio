@@ -1,0 +1,45 @@
+.home-page {
+    .text-area {
+        position: absolute;
+        left: 15%;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+        z-index: 1;
+
+        @media screen and (max-width: 768px) {
+            left: 30%;
+        }
+    }
+
+    h1,
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 4rem;
+        line-height: 60px;
+        word-spacing: -1px;
+
+        @media (max-width: 768px) {
+            font-size: 1.8rem;
+            line-height: 30px;
+        }
+        font-weight: bold;
+        font-family: "Teko", sans-serif;
+
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        margin-top: 20px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        font-size: 1rem;
+        font-family: "Figtree", sans-serif;
+    }
+}

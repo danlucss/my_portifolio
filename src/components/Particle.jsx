@@ -31,15 +31,15 @@ function Particle() {
                     {
                         background: {
                             color: {
-                                value: "#000000"
+                                value: "#0d0d0d"
                             }
                         },
                         "particles": {
                             "number": {
-                                "value": 400,
+                                "value": 255,
                                 "density": {
                                     "enable": true,
-                                    "value_area": 800
+                                    "value_area": 500
                                 }
                             },
                             "color": {
@@ -67,7 +67,7 @@ function Particle() {
                                     "enable": true,
                                     "speed": 0.2,
                                     "opacity_min": 0,
-                                    "sync": false
+                                    "sync": true
                                 }
                             },
                             "size": {
@@ -81,11 +81,11 @@ function Particle() {
                                 }
                             },
                             "line_linked": {
-                                "enable": false,
-                                "distance": 150,
-                                "color": "#ffffff",
-                                "opacity": 0.4,
-                                "width": 1
+                                "enable": true,
+                                "distance": false,
+                                "color": "#fd8852",
+                                "opacity": 0.3,
+                                "width": 0.5,
                             },
                             "move": {
                                 "enable": true,
@@ -94,7 +94,7 @@ function Particle() {
                                 "random": true,
                                 "straight": false,
                                 "out_mode": "out",
-                                "bounce": false,
+                                "bounce": true,
                                 "attract": {
                                     "enable": false,
                                     "rotateX": 600,
@@ -150,9 +150,10 @@ function Particle() {
                                 },
                                 "attract": {
                                     "rotateX": 600,
-                                    "rotateY": 1200
-
-
+                                    "rotateY": 1200,
+                                    "rotateZ": 1200,
+                                    "distance": 1200,
+                                    "duration": 0.4
                                 }
                             }
                         },

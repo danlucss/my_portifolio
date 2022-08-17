@@ -11,7 +11,7 @@ $tertiary-color: #d6c5f0;
     width: 80px;
     opacity: 0.72;
     min-height: 590px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Figtree", sans-serif;
 
     background-color: $nav-background;
     color: #fff;
@@ -105,6 +105,7 @@ $tertiary-color: #d6c5f0;
                 text-align: center;
                 opacity: 0;
                 transition: all 0.3 ease-out;
+                font-family: "Figtree", sans-serif;
             }
 
             &:first-child {
