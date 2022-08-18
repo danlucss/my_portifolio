@@ -10,42 +10,39 @@
   background-color: #5727a3;
   color: #fff;
 }
-
 .nav-bar .logo {
   display: block;
   padding: 8px 0;
   text-decoration: none;
 }
-
 .nav-bar .logo img {
   display: block;
   margin: 8px auto;
   height: auto;
   width: 80px;
 }
-
 .nav-bar .logo img:nth-child(1) {
-  animation: glow 3s ease-in-out alternate infinite;
+  -webkit-animation: glow 3s ease-in-out alternate infinite;
+          animation: glow 3s ease-in-out alternate infinite;
 }
-
 .nav-bar .logo svg {
   display: block;
   margin: 8px auto;
   height: auto;
   margin-top: 50px;
   width: 80px;
-  animation: fill 1s ease-in-out;
+  -webkit-animation: fill 1s ease-in-out;
+          animation: fill 1s ease-in-out;
   transform: rotate(90deg);
   fill: #fff;
 }
-
 .nav-bar .logo svg path {
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
-  animation: line-anim 1.5s ease forwards, fill 2s ease-in-out;
+  -webkit-animation: line-anim 1.5s ease forwards, fill 2s ease-in-out;
+          animation: line-anim 1.5s ease forwards, fill 2s ease-in-out;
   fill: #d6c5f0;
 }
-
 .nav-bar nav {
   display: block;
   text-align: center;
@@ -54,9 +51,9 @@
   top: 50%;
   margin-top: -120px;
   width: 100%;
-  animation: fadeInDown 1s ease-in-out;
+  -webkit-animation: fadeInDown 1s ease-in-out;
+          animation: fadeInDown 1s ease-in-out;
 }
-
 .nav-bar nav a {
   font-size: 2rem;
   color: #d6c5f0;
@@ -66,23 +63,18 @@
   position: relative;
   text-decoration: none;
 }
-
 .nav-bar nav a i {
   transition: all 0.3s ease-out;
 }
-
 .nav-bar nav a:hover {
   color: #d6c5f0;
 }
-
 .nav-bar nav a:hover svg {
   opacity: 0;
 }
-
 .nav-bar nav a:hover::after {
   opacity: 1;
 }
-
 .nav-bar nav a::after {
   content: "";
   font-size: 0.8rem;
@@ -96,27 +88,21 @@
   transition: all 0.3 ease-out;
   font-family: "Figtree", sans-serif;
 }
-
 .nav-bar nav a:first-child:after {
   content: "HOME";
 }
-
 .nav-bar nav a.about-link:after {
   content: "ABOUT";
 }
-
 .nav-bar nav a.portifolio-link:after {
   content: "PROJECTS";
 }
-
 .nav-bar nav a.contact-link:after {
   content: "CONTACT";
 }
-
 .nav-bar nav a.active svg {
   color: #1b0044;
 }
-
 .nav-bar ul {
   position: absolute;
   bottom: 20px;
@@ -126,9 +112,9 @@
   list-style: none;
   text-align: center;
   margin: 0;
-  animation: fadeInUp 1s ease-in-out;
+  -webkit-animation: fadeInUp 1s ease-in-out;
+          animation: fadeInUp 1s ease-in-out;
 }
-
 .nav-bar ul li a {
   padding: 7px 0;
   display: block;
@@ -137,13 +123,20 @@
   color: #d6c5f0;
   font-weight: bold;
 }
-
 .nav-bar ul li a:hover {
   color: #ee3;
 }
-
 .nav-bar ul li:hover a {
   color: #1b0044;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #d6c5f0;
+  }
 }
 
 @keyframes fill {
@@ -154,14 +147,17 @@
     fill: #d6c5f0;
   }
 }
-
+@-webkit-keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 @keyframes line-anim {
   to {
     stroke-dashoffset: 0;
   }
 }
-
-@keyframes glow {
+@-webkit-keyframes glow {
   0% {
     filter: drop-shadow(0 0 0px #fff);
   }
@@ -172,3 +168,14 @@
     filter: drop-shadow(0 0 0px #fff);
   }
 }
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 0px #fff);
+  }
+  50% {
+    filter: drop-shadow(0 0 40px #fff);
+  }
+  100% {
+    filter: drop-shadow(0 0 0px #fff);
+  }
+}/*# sourceMappingURL=index.css.map */

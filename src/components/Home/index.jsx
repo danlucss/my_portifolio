@@ -1,8 +1,13 @@
 import './index.scss';
 import { useState, useEffect } from 'react';
-import ReactTyped from 'react-typed';
+import Typed from 'react-typed';
+import 'react-typed/dist/animatedCursor.css';
 import AnimatedLetters from "../AnimatedLetters"
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Loader from 'react-loaders';
+
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -14,8 +19,9 @@ const Home = () => {
 
     const strArray = [
         " A Front-End Web Developer ",
-        " A Back-End Web in Construction",
         " A Designer Enthusiast",
+        " A Back-End Creator",
+        " Number 1 Daddy",
 
     ]
 
@@ -33,7 +39,7 @@ const Home = () => {
                     <AnimatedLetters
                         letterClass={letterClass}
                         strArray={introduction.split('')}
-                        idx={0}
+                        idx={12}
                     />
                 </h1>
 
@@ -41,7 +47,7 @@ const Home = () => {
                     <AnimatedLetters
                         letterClass={letterClass}
                         strArray={nameArray.split('')}
-                        idx={12}
+                        idx={19}
                     />
                 </h1>
 
@@ -53,31 +59,36 @@ const Home = () => {
                 /> */}
 
                 <h3>
-                    <ReactTyped
+                    <Typed
+
                         strings={strArray}
-                        typeSpeed={20}
-                        backSpeed={50}
-                        backDelay={1000}
+                        typeSpeed={50}
+                        backSpeed={1}
+
+
                         loop
-                        showCursor
+                        // showCursor
                         cursorChar="|"
                     />
                 </h3>
-                <br />
 
-                <Link to="/contact" className='contact__btn'>Contact Me</Link>
-                <br />
+
+                <Link to="/contact" className='btn contact'>Contact Me <FontAwesomeIcon icon={faEnvelope} /></Link>
+
+
                 <a
                     href="https://drive.google.com/file/d/1D9gNKvKYot0254DoCNkMSCH27p7DuaAy/view?usp=sharing"
                     target="_blank"
-                    className='resume__btn'
+                    className='btn resume'
                     download>
-                    Resume
+                    Resume <span><FontAwesomeIcon icon={faDownload} /></span>
                 </a>
 
             </div>
 
         </div>
+
+        <Loader type='ball-clip-rotate-multiple' />
     </>)
 
 }
