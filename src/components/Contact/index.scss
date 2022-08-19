@@ -1,6 +1,7 @@
 .form-zone {
     width: 100%;
-    margin-top: 20px;
+    overflow: hidden;
+
     font-family: "FigTree", sans-serif;
 
     ul {
@@ -11,7 +12,7 @@
             padding: 0;
             margin: 0;
             list-style: none;
-            margin-bottom: 10px;
+            padding-bottom: 10px;
             display: block;
             overflow: hidden;
             opacity: 0;
@@ -22,10 +23,10 @@
         }
 
         li.half {
-            width: 49%;
-            margin-left: 2%;
-            float: left;
-            clear: none;
+            width: 100%;
+            // margin-left: 2%;
+            // float: left;
+            // clear: none;
 
             &:first-child {
                 margin-left: 0;
@@ -88,5 +89,40 @@
             background: #ccc;
             color: #000;
         }
+    }
+}
+
+.test-zone {
+    width: 50%;
+    height: 50%;
+    border: 1px solid #fff;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+    .form-zone {
+        width: 100%;
+        margin-top: 20px;
+        font-family: "Figtree", sans-serif;
+        // border: 1px solid #fff;
+        li.half {
+            width: 100%;
+            margin-left: 0;
+            float: none;
+            clear: both;
+        }
+
+        .btn {
+            float: right;
+            margin-top: 20px;
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+    .test-zone {
+        width: 100%;
     }
 }

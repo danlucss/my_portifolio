@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Particle from '../Particle';
+
 import Sidebar from '../Sidebar';
 import './index.scss';
 
@@ -9,9 +9,12 @@ const Layout = () => {
         <>
             <div className='App'>
                 <Sidebar />
+                <div className='page'>
+                    <Outlet />
+                </div>
 
-                <Outlet />
             </div>
+
 
 
 

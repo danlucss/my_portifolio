@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders';
-import Particle from '../Particle';
+
 
 
 const Home = () => {
@@ -91,7 +91,7 @@ const Home = () => {
         </div>
 
         <Loader type='ball-clip-rotate-multiple' />
-        <Particle />
+
     </>)
 
 }

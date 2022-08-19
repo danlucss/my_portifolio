@@ -8,9 +8,9 @@ $tertiary-color: #d6c5f0;
     position: absolute;
     top: 0;
     height: 100%;
-    width: 80px;
+    width: 60px;
     opacity: 0.72;
-    min-height: 590px;
+    // min-height: 590px;
     font-family: "Figtree", sans-serif;
     border-radius: 2px;
 
@@ -24,9 +24,9 @@ $tertiary-color: #d6c5f0;
 
         img {
             display: block;
-            margin: 8px auto;
+            margin: 0 auto;
             height: auto;
-            width: 80px;
+            width: 60px;
 
             &:nth-child(1) {
                 animation: glow 3s ease-in-out alternate infinite;
@@ -194,5 +194,25 @@ $tertiary-color: #d6c5f0;
     }
     100% {
         filter: drop-shadow(0 0 0px #fff);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        position: relative;
+    }
+
+    ul {
+        position: none;
+        text-align: justify;
+    }
+    nav {
+        position: none;
     }
 }

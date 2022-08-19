@@ -14,10 +14,11 @@ const Contact = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLetterClass('text-animate-hover');
-        }, 1000);
+        }, 3000);
         return () => clearTimeout(timer);
     }, []);
 
+    // Init EmailJs 
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -83,6 +84,8 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
+                {/* <div className='test-zone'>
+                </div> */}
             </div>
 
 
