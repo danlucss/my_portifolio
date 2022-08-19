@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders';
+import Particle from '../Particle';
 
 
 const Home = () => {
@@ -34,61 +35,63 @@ const Home = () => {
 
     return (<>
         <div className="container home-page">
-            <div className='text-area'>
-                <h1>
-                    <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={introduction.split('')}
-                        idx={12}
-                    />
-                </h1>
+            <div className="z-container">
+                <div className="text-zone">
+                    <h1>
+                        <AnimatedLetters
+                            letterClass={letterClass}
+                            strArray={introduction.split('')}
+                            idx={12}
+                        />
+                    </h1>
 
-                <h1>
-                    <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={nameArray.split('')}
-                        idx={19}
-                    />
-                </h1>
+                    <h1>
+                        <AnimatedLetters
+                            letterClass={letterClass}
+                            strArray={nameArray.split('')}
+                            idx={19}
+                        />
+                    </h1>
 
 
-                {/* <AnimatedLetters
+                    {/* <AnimatedLetters
                     letterClass={letterClass}
                     strArray={jobArray.split('')}
                     idx={23}
                 /> */}
 
-                <h3>
-                    <Typed
+                    <h3>
+                        <Typed
 
-                        strings={strArray}
-                        typeSpeed={50}
-                        backSpeed={1}
-
-
-                        loop
-                        // showCursor
-                        cursorChar="|"
-                    />
-                </h3>
+                            strings={strArray}
+                            typeSpeed={50}
+                            backSpeed={1}
 
 
-                <Link to="/contact" className='btn contact'>Contact Me <FontAwesomeIcon icon={faEnvelope} /></Link>
+                            loop
+                            // showCursor
+                            cursorChar="|"
+                        />
+                    </h3>
 
 
-                <a
-                    href="https://drive.google.com/file/d/1D9gNKvKYot0254DoCNkMSCH27p7DuaAy/view?usp=sharing"
-                    target="_blank"
-                    className='btn resume'
-                    download>
-                    Resume <span><FontAwesomeIcon icon={faDownload} /></span>
-                </a>
+                    <Link to="/contact" className='btn contact'>Contact Me <FontAwesomeIcon icon={faEnvelope} /></Link>
 
+
+                    <a
+                        href="https://drive.google.com/file/d/1D9gNKvKYot0254DoCNkMSCH27p7DuaAy/view?usp=sharing"
+                        target="_blank"
+                        className='btn resume'
+                        download>
+                        Resume <span><FontAwesomeIcon icon={faDownload} /></span>
+                    </a>
+                </div>
             </div>
 
         </div>
 
         <Loader type='ball-clip-rotate-multiple' />
+        <Particle />
     </>)
 
 }

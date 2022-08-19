@@ -29,30 +29,36 @@ function Particle() {
 
                 options={
                     {
+                        dimensions: {
+                            height: "100vh",
+                            width: "50vw",
+                        },
                         background: {
+
                             color: {
-                                value: "transparent"
-                            }, // transparent
-                            zIndex: -1,
+                                value: "transparent",
+
+                            }, // transparen
+
 
                         },
-                        fpsLimit: 120,
+                        fpsLimit: 60,
                         "z-index": -1,
 
                         "particles": {
 
                             "number": {
-                                "value": 255,
+                                "value": 100,
 
                                 "density": {
                                     "enable": true,
 
-                                    "value_area": 500,
+                                    "value_area": 700,
 
                                 }
                             },
                             "orbit": {
-                                "enable": true,
+                                "enable": false,
                                 "rotateX": {
                                     "value": 100
                                 },
@@ -67,7 +73,7 @@ function Particle() {
 
                             "color": {
 
-                                "value": "#ffffff",
+                                "value": "#2646A6",
 
                             },
                             "responsive": {
@@ -85,12 +91,11 @@ function Particle() {
                             },
 
                             "shape": {
-                                "type": "circle",
-
-
+                                "type": "line",
                                 "stroke": {
-                                    "width": 1,
-                                    "color": "#fff",
+                                    "width": 6,
+
+                                    "color": "#ccc",
 
                                 },
                                 "polygon": {
@@ -103,17 +108,21 @@ function Particle() {
                                 }
                             },
                             "opacity": {
-                                "value": 0.48927153781200905,
-                                "random": false,
+                                "value": 0.78927153781200905,
+                                "random": true,
+
                                 "anim": {
                                     "enable": true,
-                                    "speed": 0.2,
+                                    "speed": 2,
+
                                     "opacity_min": 0,
-                                    "sync": true
+                                    "sync": true,
+                                    "color": "#fff"
+
                                 }
                             },
                             "size": {
-                                "value": 1,
+                                "value": 1.4,
                                 "random": true,
                                 "anim": {
                                     "enable": true,
@@ -124,15 +133,15 @@ function Particle() {
                                 }
                             },
                             "line_linked": {
-                                "enable": true,
+                                "enable": false,
 
                                 "distance": 20,
-                                "color": "#ffff",
-                                "opacity": .3,
+                                "color": "#205373",
+                                "opacity": .8,
                                 "width": 1,
                                 "shadow": {
                                     "enable": true,
-                                    "color": "#fff",
+                                    "color": "#205373",
                                     "blur": 5,
                                     "offset": {
                                         "x": 10,
@@ -143,31 +152,37 @@ function Particle() {
                             },
                             "move": {
                                 "enable": true,
-                                "speed": 0.7,
-                                "direction": "none",
+                                "speed": 3,
+                                "direction": "bottom",
                                 "random": true,
-                                "straight": true,
-                                "out_mode": "off",
+                                "straight": false,
+                                "out_mode": "explode",
                                 "bounce": true,
-                                "attract": {
-                                    "enable": false,
-                                    "rotateX": 600,
-                                    "rotateY": 1200
-                                }
+                                "explode": {
+                                    "mode": "circle",
+                                    "enabled": true,
+                                    "distance": 100,
+                                    "duration": 1000,
+                                    "count": 1,
+                                    "degree": 1
+                                },
+
+
                             }
                         },
                         "interactivity": {
-                            "detect_on": "canvas",
+
+                            "detect_on": "all",
                             "events": {
                                 "onhover": {
                                     "enable": true,
                                     "mode": "bubble"
                                 },
                                 "onclick": {
-                                    "enable": true,
+                                    "enable": false,
                                     "mode": "push"
                                 },
-                                "resize": true,
+                                "resize": false,
                                 "onresize": {
                                     "enable": true,
                                     "density_auto": true,
@@ -186,7 +201,7 @@ function Particle() {
                                     }
                                 },
                                 "bubble": {
-                                    "distance": 200,
+                                    "distance": 80,
                                     "size": 2,
 
                                     "duration": 3,

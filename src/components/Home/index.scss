@@ -1,7 +1,7 @@
 .home-page {
-    .text-area {
+    .text-zone {
         position: absolute;
-        // left: %;
+        left: 10%;
         top: 50%;
         transform: translateY(-50%);
         width: 40%;
@@ -72,4 +72,16 @@
     .btn.resume {
         margin-left: 20px;
     }
+}
+
+.z-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 4;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
 }

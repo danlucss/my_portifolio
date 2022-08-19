@@ -26,10 +26,11 @@ $primary-color: #ececec;
 }
 
 body {
-    background: #0c0c0c;
+    background: #00010d;
     color: #fff;
     font-family: "Figtree", sans-serif;
     font-weight: 400;
+    cursor: crosshair;
 }
 
 body::after,

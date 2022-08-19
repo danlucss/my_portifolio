@@ -80,7 +80,7 @@ const About = () => {
         </div>
       </div>
 
-      <Loader type="ball-clip-rotate-multiple" />
+      <Loader type="ball-clip-rotate-multiple" active={true} />
     </>
 
   )

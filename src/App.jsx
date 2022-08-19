@@ -29,7 +29,7 @@ const App = () => {
 
 
 
-            <Particle />
+            {/* <Particle /> */}
 
         </>
     )
