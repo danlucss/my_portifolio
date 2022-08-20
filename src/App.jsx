@@ -9,6 +9,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Portifolio from "./components/Portifolio";
 import Particle from './components/Particles';
+import Dashboard from './components/Dashboard';
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/portifolio" element={<Portifolio />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
                 </Route>
 
             </Routes>

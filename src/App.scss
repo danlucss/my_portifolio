@@ -40,6 +40,11 @@ body::before {
     font-family: "Figtree", sans-serif;
 }
 
+.dashboard {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
 @media screen and (max-width: 768px) {
     body {
         overflow: auto;
