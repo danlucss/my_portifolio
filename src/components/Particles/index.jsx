@@ -42,7 +42,7 @@ function Particle() {
                                     mode: "push",
                                     parallax: {
                                         enable: true,
-                                        force: 10, smooth: 30
+                                        force: 100, smooth: 5
                                     },
                                 },
 

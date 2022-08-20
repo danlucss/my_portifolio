@@ -9,6 +9,11 @@ import danAvatar from '../../assets/images/danlucss-photo.png';
 // import danAvatarNeon from '../../assets/images/danlucss-photo-neon.png';
 import './index.scss';
 
+import homeIcon from '../../assets/images/icons/home.svg';
+import aboutIcon from '../../assets/images/icons/user.svg';
+import portifolioIcon from '../../assets/images/icons/portfolio.svg';
+import contactIcon from '../../assets/images/icons/contact.svg';
+
 
 
 const Sidebar = () => {
@@ -60,19 +65,27 @@ const Sidebar = () => {
 
                         <div className="link-container">
                             <NavLink to='/' exact="true" activeclassname='active'>
-                                <FaHome />
+                                <i className="icon-home">
+                                    <img src={homeIcon} alt="home" />
+                                </i>
                             </NavLink>
 
                             <NavLink to='/about' className="about-link">
-                                <FaUser />
+                                <i className="icon-user">
+                                    <img src={aboutIcon} alt="about" />
+                                </i>
                             </NavLink>
 
                             <NavLink to='/portifolio' className="portifolio-link" >
-                                <BsCodeSlash />
+                                <i className="icon-portifolio">
+                                    <img src={portifolioIcon} alt="portifolio" />
+                                </i>
                             </NavLink>
 
                             <NavLink to='/contact' className="contact-link">
-                                <FaEnvelope />
+                                <i className="icon-contact">
+                                    <img src={contactIcon} alt="contact" />
+                                </i>
 
                             </NavLink>
                         </div>
