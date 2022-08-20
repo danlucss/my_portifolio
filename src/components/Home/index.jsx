@@ -15,7 +15,7 @@ const Home = () => {
 
     const introduction = 'Hello,';
 
-    const nameArray = "I am Daniel Lucas"
+    const nameArray = "I'm Daniel Lucas"
     const jobArray = 'a Web Developer'
 
     const strArray = [

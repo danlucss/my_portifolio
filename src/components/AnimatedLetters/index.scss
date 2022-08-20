@@ -15,7 +15,9 @@
 
     &:hover {
         animation: rubberBand 1s;
-        color: rgb(84, 16, 161);
+        color: rgb(124, 122, 122);
+        text-shadow: -1px -1px 10px rgb(241, 241, 241), 1px -1px 10px rgb(252, 252, 252),
+            -1px 1px 10px rgb(255, 248, 248), 1px 1px 10px rgb(255, 255, 255);
     }
 }
 

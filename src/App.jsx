@@ -1,4 +1,4 @@
-import Particle from "./components/Particle";
+
 import { Routes, Route } from 'react-router-dom';
 
 import Layout from "./components/Layout";
@@ -8,6 +8,7 @@ import './App.scss'
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Portifolio from "./components/Portifolio";
+import Particle from './components/Particles';
 
 
 

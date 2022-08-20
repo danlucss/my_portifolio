@@ -1,0 +1,28 @@
+{
+    "portifolio": [
+        {
+            "cover": "../../assets/images/shine.png",
+            "title": "Text goes here",
+            "description": "React Apps",
+            "link": "https:/github.com/danlucss"
+        },
+        {
+            "cover": "../../assets/images/shine.png",
+            "title": "Text goes here",
+            "description": "React Apps",
+            "link": "https:/github.com/danlucss"
+        },
+        {
+            "cover": "../../assets/images/shine.png",
+            "title": "Text goes here",
+            "description": "React Apps",
+            "link": "https:/github.com/danlucss"
+        },
+        {
+            "cover": "../../assets/images/shine.png",
+            "title": "Text goes here",
+            "description": "React Apps",
+            "link": "https:/github.com/danlucss"
+        }
+    ]
+}

@@ -1,7 +1,10 @@
-$nav-background: #5727a3;
-$primary-color: #1b0044;
-$secondary-color: #9153f4;
-$tertiary-color: #d6c5f0;
+$ligth-color: #d9d9d9;
+$ligth-gray-color: #a6a6a6;
+$gray-color: #595959;
+$dark-color: #262626;
+$darker-color: #0d0d0d;
+$white-color: #fff;
+$blood-color: #f44336;
 
 .nav-bar {
     z-index: 3;
@@ -14,8 +17,8 @@ $tertiary-color: #d6c5f0;
     font-family: "Figtree", sans-serif;
     border-radius: 2px;
 
-    background-color: #d9d9d9;
-    color: rgb(7, 7, 7);
+    background-color: $ligth-color;
+    color: $darker-color;
 
     .logo {
         display: block;
@@ -42,23 +45,23 @@ $tertiary-color: #d6c5f0;
         //     padding: 15px 0;
         //     font-family: "Wolfstar", sans-serif;
         // }
-        svg {
-            display: block;
-            margin: 8px auto;
-            height: auto;
-            margin-top: 50px;
-            width: 80px;
-            animation: fill 1s ease-in-out;
-            transform: rotate(90deg);
-            fill: rgb(15, 14, 14);
+        // svg {
+        //     display: block;
+        //     margin: 8px auto;
+        //     height: auto;
+        //     margin-top: 50px;
+        //     width: 80px;
+        //     animation: fill 1s ease-in-out;
+        //     transform: rotate(90deg);
+        //     fill: rgb(15, 14, 14);
 
-            path {
-                stroke-dasharray: 200;
-                stroke-dashoffset: 200;
-                animation: line-anim 1.5s ease forwards, fill 2s ease-in-out;
-                fill: $tertiary-color;
-            }
-        }
+        //     path {
+        //         stroke-dasharray: 200;
+        //         stroke-dashoffset: 200;
+        //         animation: line-anim 1.5s ease forwards, fill 2s ease-in-out;
+        //         fill: $dark-color;
+        //     }
+        // }
     }
 
     nav {
@@ -73,7 +76,7 @@ $tertiary-color: #d6c5f0;
 
         a {
             font-size: 2rem;
-            color: #000;
+            color: $darker-color;
             display: block;
             line-height: 60px;
             height: 51px;
@@ -81,11 +84,12 @@ $tertiary-color: #d6c5f0;
             text-decoration: none;
 
             i {
-                transition: all 0.3s ease-out;
+                transition: all 0.5s ease-out;
             }
 
             &:hover {
-                color: $tertiary-color;
+                color: $white-color;
+                background-color: $dark-color;
                 svg {
                     opacity: 0;
                 }
@@ -97,15 +101,17 @@ $tertiary-color: #d6c5f0;
 
             &::after {
                 content: "";
-                font-size: 0.8rem;
+                font-size: 9px;
                 letter-spacing: 2px;
+                line-height: 50px;
                 position: absolute;
+                font-weight: bold;
                 bottom: 0;
                 display: block;
                 width: 100%;
                 text-align: center;
                 opacity: 0;
-                transition: all 0.3 ease-out;
+                transition: all 0.3s ease-out;
                 font-family: "Figtree", sans-serif;
             }
 
@@ -131,8 +137,10 @@ $tertiary-color: #d6c5f0;
             }
         }
         a.active {
+            background-color: #0d0d0d;
+
             svg {
-                color: $primary-color;
+                color: $white-color;
             }
         }
     }
@@ -154,16 +162,17 @@ $tertiary-color: #d6c5f0;
                 display: block;
                 font-size: 1.5rem;
                 line-height: 16px;
-                color: $tertiary-color;
+                color: $dark-color;
                 font-weight: bold;
 
                 &:hover {
-                    color: #ee3;
+                    color: $blood-color;
                 }
             }
             &:hover {
                 a {
-                    color: $primary-color;
+                    color: $white-color;
+                    background-color: #0d0d0d;
                 }
             }
         }
@@ -175,7 +184,7 @@ $tertiary-color: #d6c5f0;
         fill: transparent;
     }
     100% {
-        fill: $tertiary-color;
+        fill: $dark-color;
     }
 }
 

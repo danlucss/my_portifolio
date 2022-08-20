@@ -7,7 +7,7 @@ html {
     width: 94%;
     will-change: contents;
     height: 100%;
-    min-height: 566px;
+    min-height: 800px;
     position: absolute;
     z-index: 1;
     transform-style: preserve-3d;
@@ -63,6 +63,19 @@ html {
         overflow: hidden;
     }
 
+    .projects-zone {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
     .text-animate-hover {
         &:hover {
             color: #5c5858;
@@ -74,6 +87,7 @@ html {
     .container {
         flex-wrap: wrap;
         padding: 10px;
+        // overflow: auto;
     }
     .container.contact-page,
     .container.about-page,
@@ -82,6 +96,7 @@ html {
             width: 100%;
             display: block;
             max-height: 100%;
+            // overflow: auto;
         }
     }
 }
