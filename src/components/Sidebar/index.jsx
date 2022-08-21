@@ -11,6 +11,7 @@ import './index.scss';
 
 import homeIcon from '../../assets/images/icons/home.svg';
 import aboutIcon from '../../assets/images/icons/user.svg';
+// import AboutIconAlt from '../../assets/images/icons/user2.svg';
 import portifolioIcon from '../../assets/images/icons/portfolio.svg';
 import contactIcon from '../../assets/images/icons/contact.svg';
 
@@ -19,6 +20,7 @@ import contactIcon from '../../assets/images/icons/contact.svg';
 const Sidebar = () => {
 
     const [active, setMode] = useState(false);
+    const [image, activeImage] = useState("${id}Icon")
 
     const ToggleMode = () => {
         setMode(!active);
@@ -67,6 +69,8 @@ const Sidebar = () => {
                             <NavLink to='/' exact="true" activeclassname='active'>
                                 <i className="icon-home">
                                     <img src={homeIcon} alt="home" />
+
+
                                 </i>
                             </NavLink>
 

@@ -11,7 +11,7 @@ $blood-color: #f44336;
     position: absolute;
     top: 0;
     height: 100%;
-    width: 60px;
+    width: 70px;
     opacity: 0.72;
     // min-height: 590px;
     font-family: "Figtree", sans-serif;
@@ -90,9 +90,6 @@ $blood-color: #f44336;
             &:hover {
                 color: $white-color;
                 background-color: $dark-color;
-                svg {
-                    opacity: 0;
-                }
 
                 &::after {
                     opacity: 1;
@@ -121,6 +118,7 @@ $blood-color: #f44336;
                 }
             }
         }
+
         a.about-link {
             &:after {
                 content: "ABOUT";
@@ -138,9 +136,10 @@ $blood-color: #f44336;
         }
         a.active {
             background-color: #0d0d0d;
+            color: $white-color;
 
-            svg {
-                color: $white-color;
+            &::after {
+                opacity: 1;
             }
         }
     }

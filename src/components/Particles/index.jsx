@@ -39,11 +39,14 @@ function Particle() {
                                 },
                                 onHover: {
                                     enable: true,
-                                    mode: "push",
+                                    mode: "bubble",
+
                                     parallax: {
                                         enable: true,
                                         force: 100, smooth: 5
                                     },
+                                    resize: true
+
                                 },
 
 
@@ -52,10 +55,10 @@ function Particle() {
                         },
                         particles: {
                             number: {
-                                value: 80,
+                                value: 120,
                                 density: {
                                     enable: true,
-                                    value_area: 800
+                                    value_area: 1220
                                 }
                             },
                             color: {
@@ -64,8 +67,8 @@ function Particle() {
                             shape: {
                                 type: "circle",
                                 stroke: {
-                                    width: 0,
-                                    color: "#000000"
+                                    width: 1,
+                                    color: "#fff"
                                 },
                                 polygon: {
                                     nb_sides: 5
@@ -119,14 +122,28 @@ function Particle() {
                             }
                         },
                         background: {
-                            color: "#000000"
+                            color: "#0d0d0d"
                         },
+                        modes: {
+                            bubbles: {
+                                distance: 400,
+                                size: 40,
+                                duration: 2,
+                                opacity: 0.8,
+                                speed: 3
+                            },
+                            push: {
+                                particles_nb: 20
+                            }
+
+
+                        },
+
                         detectRetina: true,
                         retina_detect: true,
 
                     }
                 }
-
             />
         </>
     )

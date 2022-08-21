@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
+import { collection } from 'firebase/fireStore';
 
-import { FaExternalLinkAlt, FaGithub, FaJs, FaPython, FaReact, FaTypo3 } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaJs, FaPython, FaReact, } from 'react-icons/fa';
 
 import './index.scss';
 
-import ravenImg from '../../assets/images/shine.png';
+import portifoliaImg from '../../assets/images/portfolia.png';
 import { SiTypescript } from 'react-icons/si';
 
 
 const Portifolio = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
+    const [portfolio, setPortfolio] = useState([]);
 
 
 
@@ -22,6 +24,13 @@ const Portifolio = () => {
         }, 3000);
         return () => clearTimeout(timer);
     }, []);
+
+    const getPortifolio = async () => {
+        const querySnapshot = await getDocs(collection(db, 'portifolio'));
+        console.log(querySnapshot)
+        // setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
+
+    }
 
     return (
         <>
@@ -34,7 +43,7 @@ const Portifolio = () => {
                             idx={12}
                         />
                     </h1>
-                    <div className='btn__container'>
+                    {/* <div className='btn__container'>
 
                         <button className="btn__action">
                             <FaReact className="icon" />
@@ -49,13 +58,13 @@ const Portifolio = () => {
                             <SiTypescript className="icon" />
                         </button>
 
-                    </div>
+                    </div> */}
 
                 </div>
                 <div className="projects-zone">
                     <div className="project-card">
                         <div className="card__img">
-                            <img src={ravenImg} alt="" />
+                            <img src={portifoliaImg} alt="" />
                         </div>
 
                         <div className='card__info'>
@@ -74,7 +83,7 @@ const Portifolio = () => {
                     </div>
                     <div className="project-card">
                         <div className="card__img">
-                            <img src={ravenImg} alt="ok" />
+                            <img src={portifoliaImg} alt="ok" />
                         </div>
                         <div className='card__info'>
 
@@ -93,7 +102,7 @@ const Portifolio = () => {
                     </div>
                     <div className="project-card">
                         <div className="card__img">
-                            <img src={ravenImg} alt="ok" />
+                            <img src={portifoliaImg} alt="ok" />
                         </div>
                         <div className='card__info'>
 
@@ -112,7 +121,7 @@ const Portifolio = () => {
                     </div>
                     <div className="project-card">
                         <div className="card__img">
-                            <img src={ravenImg} alt="ok" />
+                            <img src={portifoliaImg} alt="ok" />
                         </div>
                         <div className='card__info'>
 
