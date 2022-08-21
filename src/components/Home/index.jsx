@@ -4,9 +4,9 @@ import Typed from 'react-typed';
 import 'react-typed/dist/animatedCursor.css';
 import AnimatedLetters from "../AnimatedLetters"
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 import Loader from 'react-loaders';
+import { FaDownload, FaEnvelope } from 'react-icons/fa';
 
 
 
@@ -75,7 +75,7 @@ const Home = () => {
                     </h3>
 
 
-                    <Link to="/contact" className='btn contact'>Contact Me <FontAwesomeIcon icon={faEnvelope} /></Link>
+                    <Link to="/contact" className='btn contact'>Contact Me <FaEnvelope /></Link>
 
 
                     <a
@@ -83,7 +83,7 @@ const Home = () => {
                         target="_blank"
                         className='btn resume'
                         download>
-                        Resume <span><FontAwesomeIcon icon={faDownload} /></span>
+                        Resume <span><FaDownload /></span>
                     </a>
                 </div>
             </div>

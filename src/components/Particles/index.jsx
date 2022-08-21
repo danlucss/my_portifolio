@@ -29,6 +29,7 @@ function Particle() {
 
                 options={
                     {
+                        zIndex: -1,
                         fpsLimit: 60,
                         interactivity: {
                             detectsOn: "window",
@@ -122,15 +123,25 @@ function Particle() {
                             }
                         },
                         background: {
-                            color: "#0d0d0d"
+                            color: "#0d0d0d",
+                            zIndex: -1
                         },
                         modes: {
                             bubbles: {
+                                resizeBy: {
+                                    enable: true,
+                                    speed: 7,
+                                    size: 80,
+                                    quality: false
+                                },
                                 distance: 400,
                                 size: 40,
                                 duration: 2,
                                 opacity: 0.8,
-                                speed: 3
+                                speed: 3,
+                                resize: true,
+
+
                             },
                             push: {
                                 particles_nb: 20

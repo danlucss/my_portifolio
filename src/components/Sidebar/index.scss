@@ -8,11 +8,12 @@ $blood-color: #f44336;
 
 .nav-bar {
     z-index: 3;
-    position: absolute;
+    position: fixed;
     top: 0;
-    height: 100%;
+    height: calc(100% - 40px);
+    max-height: max-content;
     width: 70px;
-    opacity: 0.72;
+    opacity: 1;
     // min-height: 590px;
     font-family: "Figtree", sans-serif;
     border-radius: 2px;

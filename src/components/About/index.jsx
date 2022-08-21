@@ -3,8 +3,8 @@ import Loader from 'react-loaders';
 import { useState, useEffect } from 'react';
 
 import AnimatedLetters from '../AnimatedLetters';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faGit, faHtml5, faNode, faPython, faReact, faSass } from '@fortawesome/free-brands-svg-icons';
+
+import { FaGit, FaHtml5, FaPython, FaReact, FaSass, FaNode } from 'react-icons/fa';
 
 const About = () => {
 
@@ -52,27 +52,27 @@ const About = () => {
           <div className='cube-spinner'>
 
             <div className='face1'>
-              <FontAwesomeIcon icon={faReact} />
+              <FaReact />
 
             </div>
             <div className='face2'>
-              <FontAwesomeIcon icon={faHtml5} />
+              <FaHtml5 />
 
             </div>
             <div className='face3'>
-              <FontAwesomeIcon icon={faPython} />
+              <FaPython />
 
             </div>
             <div className='face4'>
-              <FontAwesomeIcon icon={faNode} />
+              <FaNode />
 
             </div>
             <div className='face5'>
-              <FontAwesomeIcon icon={faGit} />
+              <FaGit />
 
             </div>
             <div className='face6'>
-              <FontAwesomeIcon icon={faSass} />
+              <FaSass />
 
             </div>
 

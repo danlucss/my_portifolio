@@ -4,24 +4,30 @@ html {
 
 .container {
     box-sizing: border-box;
-    width: 94%;
+    width: 100%;
     will-change: contents;
-    height: 100%;
+    height: calc(100vh - var(--header-height));
     min-height: 800px;
+
     position: absolute;
     z-index: 1;
+    padding-right: 100px;
+
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
-    overflow: hidden;
+    overflow: auto;
     opacity: 0;
     padding-left: 100px;
     padding-top: 100px;
 
-    display: flex;
+    // display: flex;
 
     gap: 0.5rem;
     flex-wrap: nowrap;
+
+    @media screen and (max-width: 768px) {
+    }
 }
 
 .container.contact-page,
@@ -63,18 +69,33 @@ html {
         overflow: hidden;
     }
 
-    .projects-zone {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #000;
+    // .projects-zone {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
+    //     height: 100%;
+    //     padding-top: 300px;
+    //     // padding-bottom: 100px;
+
+    //     display: flex;
+    //     flex-direction: row;
+    //     align-items: center;
+    //     justify-content: center;
+    //     padding: 10px 20px;
+    //     gap: 3rem;
+
+    //     @media screen and (max-width: 768px) {
+    //         padding-top: 1200px;
+    //         // position: block;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         justify-content: center;
+    //         gap: 1rem;
+    //         padding-bottom: 50px;
+    //     }
+    // }
 
     .text-animate-hover {
         &:hover {
@@ -99,4 +120,8 @@ html {
             // overflow: auto;
         }
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
