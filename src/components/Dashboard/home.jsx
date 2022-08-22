@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { auth, storage, db } from '../../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-import { collection, addDoc } from 'firebase/fireStore';
+import { collection, getDoc } from 'firebase/fireStore';
 
 
 const Home = () => {
@@ -53,7 +53,7 @@ const Home = () => {
 
     const savePortfolio = async (portfolio) => {
         try {
-            await addDoc(collection(db, 'portfolio'), portfolio);
+            await getDoc(collection(db, 'portfolio'), portfolio);
             // window.location.reload(false);
         } catch (error) {
             alert('Failed to add portfolio');
