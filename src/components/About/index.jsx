@@ -40,7 +40,7 @@ const About = () => {
             Sou muito curioso, e gosto de aprender coisas novas e desenvolver projetos que me ajudem a crescer.
 
           </p>
-          Se for preciso me deifinir com poucas palavras, eu sou pai de dois filhos maravilhosos, amo os livros e a poesia. As artes marciais são minha grande paixão. E, claro, sou obsecado por tecnologia!!!
+          Se for preciso me definir com poucas palavras, eu sou pai de dois filhos maravilhosos, amo os livros e a poesia. As artes marciais são minha grande paixão. E, claro, sou obsecado por tecnologia!!!
           <p>
 
           </p>

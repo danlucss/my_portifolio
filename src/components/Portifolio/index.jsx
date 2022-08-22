@@ -3,8 +3,9 @@ import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 
 //database imports
-import { collection, getDocs } from 'firebase/fireStore';
+import { collection, getDocs } from 'firebase/firestore/lite';
 import { db } from '../../firebase';
+
 
 
 
