@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getStorage } from "firebase/storage";
-import { getFirestore } from "@firebase/firestore";
+import { getFirestore, getDoc, collection } from "firebase/firestore/lite";
 import 'firebase/fireStore';
 
 
