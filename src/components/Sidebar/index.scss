@@ -10,7 +10,7 @@ $blood-color: #f44336;
     z-index: 3;
     position: fixed;
     top: 0;
-    height: calc(100% - 40px);
+    height: calc(100% - 10px);
     max-height: max-content;
     width: 70px;
     opacity: 1;
@@ -80,6 +80,7 @@ $blood-color: #f44336;
             color: $darker-color;
             display: block;
             line-height: 60px;
+            padding: 5px 0px;
             height: 51px;
             position: relative;
             text-decoration: none;
@@ -158,7 +159,7 @@ $blood-color: #f44336;
 
         li {
             a {
-                padding: 7px 0;
+                padding: 10px 10px;
                 display: block;
                 font-size: 1.5rem;
                 line-height: 16px;
@@ -177,6 +178,12 @@ $blood-color: #f44336;
             }
         }
     }
+}
+.hamburguer-icon,
+.menu-close {
+    display: none;
+    color: #fff;
+    font-size: 40px;
 }
 
 @keyframes fill {
@@ -206,22 +213,59 @@ $blood-color: #f44336;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .nav-bar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 60px;
-        position: relative;
+        background: $ligth-color;
+        position: initial;
+        height: auto;
+        min-height: auto;
+        transition: all 3s ease-out;
+
+        ul,
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            background: $ligth-gray-color;
+            top: 0;
+            left: 0;
+
+            position: fixed;
+            z-index: 2;
+            padding-top: 50%;
+            transition: all 3s ease-out;
+
+            &.mobile-show {
+                display: block;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            a:after {
+                text-align: start;
+                opacity: 1;
+                position: initial;
+                width: auto;
+
+                margin-left: 20px;
+            }
+        }
     }
 
-    ul {
-        position: none;
-        text-align: justify;
-    }
-    nav {
-        position: none;
+    .hamburguer-icon,
+    .menu-close {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        top: 15px;
+        right: 15px;
     }
 }

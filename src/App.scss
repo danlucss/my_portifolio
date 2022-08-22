@@ -4,6 +4,33 @@ $primary-color: #ececec;
 
 @import "node_modules/loaders.css/src/animations/ball-clip-rotate-multiple.scss";
 
+@font-face {
+    font-family: "Wild Wolf";
+    src: url("../src/assets/fonts/Wild Wolf.ttf");
+}
+
+@font-face {
+    font-family: "WolfStar";
+    src: url("../src/assets/fonts/WolfStar.ttf");
+}
+
+@font-face {
+    font-family: "gang_wolfik";
+    src: url("../src/assets/fonts/gang_wolfik.ttf");
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../src/assets/fonts/Figtree/Figtree-VariableFont_wght.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Teko";
+    src: url("../src/assets/fonts/Teko/Teko-Bold.ttf");
+    font-weight: bold;
+}
+
 .loader-hidden {
     display: none;
 }
@@ -26,27 +53,7 @@ $primary-color: #ececec;
     z-index: 2;
 }
 
-body {
-    background: #00010d;
-    color: #fff;
-    font-family: "Figtree", sans-serif;
-    font-weight: 400;
-    cursor: crosshair;
-    overflow: auto;
-}
-
-body::after,
-body::before {
-    font-family: "Figtree", sans-serif;
-}
-
 .dashboard {
     margin-top: 200px;
     margin-left: 200px;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        overflow: auto;
-    }
 }

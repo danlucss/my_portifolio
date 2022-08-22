@@ -56,7 +56,7 @@ const Portifolio = () => {
                                 {/* <div> */}
                                 <div className='image__box'>
                                     <img src={project.image}
-                                        alt={project.name} id="box__image" width={400} height="400" />
+                                        alt={project.name} id="box__image" />
                                 </div>
                                 <div className='card__info'>
                                     <p className='card__title'>

@@ -1,17 +1,16 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
-import { FaEnvelope, FaGithub, FaHome, FaLinkedin, FaUser, FaWhatsapp } from 'react-icons/fa';
-import { BsCodeSlash } from 'react-icons/bs';
+import { FaBars, FaClosedCaptioning, FaExchangeAlt, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
-
+import { VscClose } from 'react-icons/vsc';
 import danAvatar from '../../assets/images/danlucss-photo.png';
-// import danAvatarNeon from '../../assets/images/danlucss-photo-neon.png';
+
 import './index.scss';
 
 import homeIcon from '../../assets/images/icons/home.svg';
 import aboutIcon from '../../assets/images/icons/user.svg';
-// import AboutIconAlt from '../../assets/images/icons/user2.svg';
+
 import portifolioIcon from '../../assets/images/icons/portfolio.svg';
 import contactIcon from '../../assets/images/icons/contact.svg';
 
@@ -20,7 +19,10 @@ import contactIcon from '../../assets/images/icons/contact.svg';
 const Sidebar = () => {
 
     const [active, setMode] = useState(false);
-    const [image, activeImage] = useState("${id}Icon")
+    const [showNav, setShowNav] = useState(false);
+
+
+
 
     const ToggleMode = () => {
         setMode(!active);
@@ -28,14 +30,14 @@ const Sidebar = () => {
 
 
     return (
-        <>
-            <div className='nav-bar'>
 
-                <Link to='/' className='logo'>
-                    <img src={danAvatar} alt="DanLucss" />
-                    {/* <img src={danAvatarNeon} alt="DanLucss neon" /> */}
+        <div className='nav-bar'>
 
-                    {/* <svg id='svg-logo' width="361" height="115" viewBox="0 0 361 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Link to='/' className='logo'>
+                <img src={danAvatar} alt="DanLucss" />
+                {/* <img src={danAvatarNeon} alt="DanLucss neon" /> */}
+
+                {/* <svg id='svg-logo' width="361" height="115" viewBox="0 0 361 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="path-1-outside-1_112_21" maskUnits="userSpaceOnUse" x="0" y="0" width="361" height="115" fill="black">
                             <rect fill="white" width="361" height="115" />
                             <path d="M33.55 75.5C33.4667 75.5 32.8833 76.4167 31.8 78.25C30.8 80.0833 29.425 82.0833 27.675 84.25C25.925 86.4167 23.8417 88.4167 21.425 90.25C19.0917 92.0833 16.5917 93 13.925 93C10.2583 93 7.175 91.875 4.675 89.625C2.25833 87.375 1.05 84.2917 1.05 80.375C0.883333 78.375 1.13333 76 1.8 73.25C2.55 70.5 3.59167 67.6667 4.925 64.75C6.34167 61.75 8.00833 58.875 9.925 56.125C11.925 53.2917 14.05 50.875 16.3 48.875C18.55 46.7917 20.8833 45.25 23.3 44.25C25.8 43.25 28.3 43.0833 30.8 43.75V42C30.8 39.8333 30.7167 37.625 30.55 35.375C30.4667 33.0417 30.3417 30.4167 30.175 27.5C30.0917 24.5 29.9667 21.0833 29.8 17.25C29.7167 13.3333 29.675 8.66667 29.675 3.25C29.925 2.33333 30.3417 1.75 30.925 1.5C31.5917 1.16667 32.3 1 33.05 1C34.9667 1 36.4667 1.625 37.55 2.875C38.7167 4.125 39.425 5.66667 39.675 7.5C39.5083 10.3333 39.425 13.25 39.425 16.25C39.5083 19.1667 39.675 22.5 39.925 26.25C40.175 30 40.55 34.25 41.05 39C41.6333 43.75 42.3417 49.375 43.175 55.875C44.0083 62.2917 45.0083 69.7083 46.175 78.125C47.3417 86.4583 48.7167 96.125 50.3 107.125V111.375C50.3 111.875 50.0917 112.25 49.675 112.5C49.3417 112.75 48.8833 112.917 48.3 113C47.8 113.167 47.2583 113.25 46.675 113.25C46.175 113.333 45.8 113.375 45.55 113.375C44.3 113.375 42.9667 113 41.55 112.25C40.1333 111.583 39.3 110.625 39.05 109.375L34.425 76C34.425 75.75 34.3 75.625 34.05 75.625C33.8833 75.5417 33.7167 75.5 33.55 75.5ZM11.55 78.25C11.55 78.5 11.5083 78.9583 11.425 79.625C11.425 80.2083 11.425 80.8333 11.425 81.5C11.5083 82.1667 11.6333 82.75 11.8 83.25C11.9667 83.75 12.3 84 12.8 84C14.8833 84.0833 17.0083 83.2917 19.175 81.625C21.425 79.9583 23.4667 77.9167 25.3 75.5C27.1333 73 28.6333 70.3333 29.8 67.5C31.05 64.6667 31.7167 62.125 31.8 59.875C31.9667 57.625 31.425 55.9167 30.175 54.75C29.0083 53.5 26.9667 53.2083 24.05 53.875C20.4667 57.0417 17.4667 60.6667 15.05 64.75C12.7167 68.8333 11.55 73.3333 11.55 78.25Z" />
@@ -58,69 +60,77 @@ const Sidebar = () => {
                     </svg> */}
 
 
-                </Link>
-                <nav>
-                    <div className={active ? 'icon iconActive' : 'icon'} >
-                        <div className='hamburger hamburguerIcon'></div>
-                    </div>
-                    <div className={active ? 'icon iconActive' : 'icon'} >
+            </Link>
 
-                        <div className="link-container">
-                            <NavLink to='/' exact="true" activeclassname='active'>
-                                <i className="icon-home">
-                                    <img src={homeIcon} alt="home" />
+            <nav className={showNav ? "mobile-show" : ""} >
 
 
-                                </i>
-                            </NavLink>
+                <NavLink to='/' exact="true" activeclassname='active'>
+                    <i className="icon-home">
+                        <img src={homeIcon} alt="home" />
+                    </i>
+                </NavLink>
 
-                            <NavLink to='/about' className="about-link">
-                                <i className="icon-user">
-                                    <img src={aboutIcon} alt="about" />
-                                </i>
-                            </NavLink>
+                <NavLink to='/about' className="about-link">
+                    <i className="icon-user">
+                        <img src={aboutIcon} alt="about" />
+                    </i>
+                </NavLink>
 
-                            <NavLink to='/portifolio' className="portifolio-link" >
-                                <i className="icon-portifolio">
-                                    <img src={portifolioIcon} alt="portifolio" />
-                                </i>
-                            </NavLink>
+                <NavLink to='/portifolio' className="portifolio-link" >
+                    <i className="icon-portifolio">
+                        <img src={portifolioIcon} alt="portifolio" />
+                    </i>
+                </NavLink>
 
-                            <NavLink to='/contact' className="contact-link">
-                                <i className="icon-contact">
-                                    <img src={contactIcon} alt="contact" />
-                                </i>
+                <NavLink to='/contact' className="contact-link">
+                    <i className="icon-contact">
+                        <img src={contactIcon} alt="contact" />
+                    </i>
 
-                            </NavLink>
-                        </div>
-                    </div>
+                </NavLink>
 
-                </nav>
 
-                <ul>
-                    <li>
-                        <a href='https://github.com/danlucss' target="_blank" rel='noreferrer'>
-                            <FaGithub />
-                        </a>
-                    </li>
-                    <li>
-                        <a href='https://linkedin.com/in/danlucss' target="_blank" rel='noreferrer'>
-                            <FaLinkedin />
-                        </a>
-                    </li>
-                    <li>
-                        <a href='mailto:daniellucas.bio@gmail.com' target="_blank" rel='noreferrer'>
-                            <SiGmail />
-                        </a>
-                    </li>
-                    <li>
-                        <a href='http://api.whatsapp.com/send?phone=5562993298751' target="_blank" rel='noreferrer'>
-                            <FaWhatsapp />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </>
+                <VscClose className='menu-close' onClick={() => {
+                    setShowNav(false)
+                    const menuOpen = document.querySelector('.hamburguer-icon');
+
+                    menuOpen.style.display = 'block';
+                }} />
+            </nav >
+
+            <ul>
+                <li>
+                    <a href='https://github.com/danlucss' target="_blank" rel='noreferrer'>
+                        <FaGithub />
+                    </a>
+                </li>
+                <li>
+                    <a href='https://linkedin.com/in/danlucss' target="_blank" rel='noreferrer'>
+                        <FaLinkedin />
+                    </a>
+                </li>
+                <li>
+                    <a href='mailto:daniellucas.bio@gmail.com' target="_blank" rel='noreferrer'>
+                        <SiGmail />
+                    </a>
+                </li>
+                <li>
+                    <a href='http://api.whatsapp.com/send?phone=5562993298751' target="_blank" rel='noreferrer'>
+                        <FaWhatsapp />
+                    </a>
+                </li>
+            </ul>
+            <FaBars onClick={() => {
+                const menuOpen = document.querySelector('.hamburguer-icon');
+
+                setShowNav(true)
+                menuOpen.style.display = 'none';
+
+            }
+            } className='hamburguer-icon' />
+        </div >
+
     )
 };
 

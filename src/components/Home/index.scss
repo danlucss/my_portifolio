@@ -1,19 +1,17 @@
 .home-page {
     .text-zone {
         position: absolute;
-        left: 10%;
+        left: 6%;
         top: 50%;
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
         z-index: 1;
+        padding-left: 30px;
+
         a {
             text-decoration: none;
             color: #fff;
-        }
-
-        @media screen and (max-width: 768px) {
-            left: 30%;
         }
     }
 
@@ -28,10 +26,6 @@
         line-height: 60px;
         word-spacing: -1px;
 
-        @media (max-width: 768px) {
-            font-size: 1.8rem;
-            line-height: 30px;
-        }
         font-weight: bold;
         font-family: "Teko", sans-serif;
 
@@ -55,7 +49,7 @@
         letter-spacing: 4px;
         padding: 10px 20px;
         border-radius: 5px;
-        border: 0.3px solid #fff;
+        border: 1px solid #fff;
         display: block;
         text-transform: uppercase;
 
@@ -84,4 +78,28 @@
     z-index: 4;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+}
+
+@media screen and (max-width: 1200px) {
+    .home-page {
+        .text-zone {
+            width: 100%;
+            left: 0;
+            top: 10%;
+            transform: translateY(0);
+            padding-left: 20px;
+        }
+
+        .btn {
+            width: 80%;
+            margin-top: 20px;
+            float: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .btn.resume {
+            margin-left: 0;
+        }
+    }
 }

@@ -1,0 +1,19 @@
+body {
+    background: #00010d;
+    color: #fff;
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    cursor: crosshair;
+    overflow: auto;
+}
+
+body::after,
+body::before {
+    font-family: "Figtree", sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        overflow: visible;
+    }
+}
