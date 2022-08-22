@@ -1,14 +1,19 @@
-@font-face {
-  font-family: "Wild Wolf";
-  src: url("../src/assets/fonts/Wild Wolf.ttf");
+body {
+    background: #00010d;
+    color: #fff;
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    cursor: crosshair;
+    overflow: auto;
 }
 
-@font-face {
-  font-family: "WolfStar";
-  src: url("../src/assets/fonts/WolfStar.ttf");
+body::after,
+body::before {
+    font-family: "Figtree", sans-serif;
 }
 
-@font-face {
-  font-family: "gang_wolfik";
-  src: url("../src/assets/fonts/gang_wolfik.ttf");
+@media screen and (max-width: 1200px) {
+    body {
+        overflow: visible;
+    }
 }
