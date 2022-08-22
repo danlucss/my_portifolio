@@ -13,16 +13,16 @@ import { FaDownload, FaEnvelope } from 'react-icons/fa';
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
 
-    const introduction = 'Hello,';
+    const introduction = "Olá, sou o";
 
-    const nameArray = "I'm Daniel Lucas"
-    const jobArray = 'a Web Developer'
+    const nameArray = "Daniel Lucas"
+    // const jobArray = 'a Web Developer'
 
     const strArray = [
-        " A Front-End Web Developer ",
-        " A Designer Enthusiast",
-        " A Back-End Creator",
-        " Number 1 Daddy",
+        " Desenvolvedor Front-End ",
+        " Entusiasta de Web Design",
+        " Full-Stack Developer in training",
+        " Pai número 1",
 
     ]
 
@@ -75,7 +75,7 @@ const Home = () => {
                     </h3>
 
 
-                    <Link to="/contact" className='btn contact'>Contact Me <FaEnvelope /></Link>
+                    <Link to="/contact" className='btn contact'>Entre em contato <FaEnvelope /></Link>
 
 
                     <a
@@ -83,7 +83,7 @@ const Home = () => {
                         target="_blank"
                         className='btn resume'
                         download>
-                        Resume <span><FaDownload /></span>
+                        Baixe meu currículo<span><FaDownload /></span>
                     </a>
                 </div>
             </div>

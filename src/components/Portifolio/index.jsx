@@ -8,7 +8,7 @@ import { db } from '../../firebase';
 
 
 
-import { FaExternalLinkAlt, FaGithub, FaJs, FaPython, FaReact, } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 import './index.scss';
 
@@ -64,12 +64,14 @@ const Portifolio = () => {
                                     </p>
                                     <h4 className="card__description">{project.description}
                                     </h4>
-                                    <button className="btn__action" onClick={() => window.open(project.url, '_blank')}>
-                                        <FaExternalLinkAlt />
-                                    </button>
-                                    <button className="btn__action" onClick={() => window.open(project.url, '_blank')}>
-                                        <FaGithub />
-                                    </button>
+                                    <div className='card__links'>
+                                        <button className="btn__action" onClick={() => window.open(project.demoUrl)}>
+                                            <FaExternalLinkAlt />
+                                        </button>
+                                        <button className="btn__action" onClick={() => window.open(project.repoUrl)}>
+                                            <FaGithub />
+                                        </button>
+                                    </div>
                                     {/* </div> */}
                                 </div>
                             </div>

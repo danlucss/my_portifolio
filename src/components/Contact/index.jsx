@@ -9,7 +9,7 @@ const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
     const form = useRef();
-    const strContact = 'Contact Me';
+    const strContact = 'Contate-me';
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -51,9 +51,11 @@ const Contact = () => {
 
                     </h1>
                     <p>
-                        I am interested in freelance opportunities - especially on ambitious
-                        or large projects. However, if you have any other requests or
-                        questions, don't hesitate to contact me using below form either.
+                        Estou interessado em entrar para o mercado - especialmente para trabalhar em grandes projetos ou em projetos que podem mudar a vida das pessoas!
+
+                    </p>
+                    <p>
+                        Se você ficou com alguma duvida ou quer falar comigo, preecha o formulário abaixo e seremos conectados!
                     </p>
 
 
@@ -61,7 +63,7 @@ const Contact = () => {
                         <form ref={form} onSubmit={sendEmail}>
                             <ul>
                                 <li className="half">
-                                    <input type="text" name="name" placeholder="Name"
+                                    <input type="text" name="name" placeholder="Nome"
                                         required />
                                 </li>
                                 <li className="half">
@@ -69,16 +71,16 @@ const Contact = () => {
                                         required />
                                 </li>
                                 <li>
-                                    <input type="text" name="subject" placeholder="Subject"
+                                    <input type="text" name="subject" placeholder="Assunto"
                                         required
                                     />
                                 </li>
                                 <li>
-                                    <textarea name="message" placeholder="Message"
+                                    <textarea name="message" placeholder="Mensagem"
                                         required />
                                 </li>
                                 <li>
-                                    <button className='btn btn__send' type="submit">Send</button>
+                                    <button className='btn btn__send' type="submit">Enviar</button>
                                 </li>
                             </ul>
                         </form>

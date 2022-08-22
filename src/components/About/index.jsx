@@ -10,7 +10,7 @@ const About = () => {
 
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const str = 'About Me';
+  const str = 'Sobre mim';
 
   useEffect(() => {
     setTimeout(() => {
@@ -33,18 +33,16 @@ const About = () => {
           </h1>
 
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            Eu sou um desenvolvedor web ambicioso e apaixonado por tecnologia!
+            Que procura uma opotunidade para trabalhar com as tecnologias mais modernas e projetos diversificados.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            Sou muito curioso, e gosto de aprender coisas novas e desenvolver projetos que me ajudem a crescer.
+
           </p>
+          Se for preciso me deifinir com poucas palavras, eu sou pai de dois filhos maravilhosos, amo os livros e a poesia. As artes marciais são minha grande paixão. E, claro, sou obsecado por tecnologia!!!
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+
           </p>
         </div>
 
