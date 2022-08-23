@@ -3,8 +3,9 @@ import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 
 //database imports
-import { collection, getDocs } from 'firebase/fireStore';
+import { collection, getDocs } from 'firebase/firestore/lite';
 import { db } from '../../firebase';
+
 
 
 
@@ -94,7 +95,7 @@ const Portifolio = () => {
                 <h1 className='page-tittle'>
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={'Portifolio'.split('')}
+                        strArray={'Portfólio'.split('')}
                         idx={12}
                     />
                 </h1>

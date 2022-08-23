@@ -3,10 +3,14 @@ import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getStorage } from "firebase/storage";
+<<<<<<< HEAD
 import { getFirestore, getDoc, collection } from "firebase/firestore/lite";
 import 'firebase/fireStore';
 
 
+=======
+import { getFirestore } from "firebase/firestore/lite";
+>>>>>>> feature-bug
 
 const firebaseConfig = {
     apiKey: "AIzaSyAGds8BVNDHtb5LHwQmFS-w1je-imuheOQ",

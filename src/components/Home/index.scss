@@ -87,20 +87,33 @@
 @media screen and (max-width: 1200px) {
     .home-page {
         .text-zone {
+            position: initial;
             width: 100%;
-            left: 0;
-            top: 10%;
+
             transform: translateY(0);
             padding-left: 20px;
+            overflow: hidden;
+
+            h3 {
+                margin-bottom: 30px;
+                height: 70px;
+            }
         }
 
         .btn {
-            width: 80%;
+            max-width: 60%;
             margin-top: 20px;
             float: none;
             display: flex;
             justify-content: space-around;
             align-items: center;
+
+            svg {
+                font-size: 30px;
+            }
+        }
+        .btn.contact {
+            margin-top: 20px;
         }
         .btn.resume {
             margin-left: 0;

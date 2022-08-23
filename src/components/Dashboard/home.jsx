@@ -2,7 +2,11 @@ import { useRef } from 'react';
 import { auth, storage, db } from '../../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
+<<<<<<< HEAD
 import { collection, getDoc } from 'firebase/firestore/lite';
+=======
+import { collection, addDoc } from 'firebase/firestore/lite';
+>>>>>>> feature-bug
 
 
 const Home = () => {
@@ -55,6 +59,7 @@ const Home = () => {
         try {
             await getDoc(collection(db, 'portfolio'), portfolio);
             // window.location.reload(false);
+            alert("Portifolio adicionado com sucesso!");
         } catch (error) {
             alert('Failed to add portfolio');
         }
