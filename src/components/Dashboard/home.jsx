@@ -55,6 +55,7 @@ const Home = () => {
         try {
             await addDoc(collection(db, 'portfolio'), portfolio);
             // window.location.reload(false);
+            alert("Portifolio adicionado com sucesso!");
         } catch (error) {
             alert('Failed to add portfolio');
         }

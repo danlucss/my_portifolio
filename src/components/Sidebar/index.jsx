@@ -21,36 +21,28 @@ import contactIcon from '../../assets/images/icons/contact.svg';
 
 const Sidebar = () => {
 
-    const [active, setMode] = useState(false);
-
     const [showMenu, setShowMenu] = useState(false);
-
 
     const ToggleMenu = () => {
         setShowMenu(!showMenu);
     }
 
-
-    const ToggleMode = () => {
-        setMode(!active);
-    }
-
-
     return (
 
         <div className='nav-bar'>
-
             <Link to='/' className='logo'>
                 <img src={danAvatar} alt="DanLucss" />
-
             </Link>
 
             <nav>
                 <div className={showMenu ? 'icon iconActive' : 'icon'} onClick={ToggleMenu}>
+
                     <div className='hamburger hamburgerIcon'></div>
                 </div>
+
                 <div className={showMenu ? 'menu menuOpen' : 'menu menuClose'}>
                     <div className='links-container'>
+
                         <NavLink to='/' exact="true" className="menu-item" activeclassname='active' onClick={ToggleMenu}>
                             <i className="icon-home">
                                 <img src={homeIcon} alt="home" />
@@ -78,12 +70,7 @@ const Sidebar = () => {
                     </div>
 
 
-                    {/* <VscClose className='menu-close' onClick={() => {
-                        setShowNav(false)
-                        const menuOpen = document.querySelector('.hamburguer-icon');
 
-                        menuOpen.style.display = 'block';
-                    }} /> */}
                 </div>
             </nav >
 
@@ -111,14 +98,7 @@ const Sidebar = () => {
                 </li>
             </ul>
 
-            <FaBars onClick={() => {
-                const menuOpen = document.querySelector('.hamburguer-icon');
 
-                setShowNav(true)
-                menuOpen.style.display = 'none';
-
-            }
-            } className='hamburguer-icon' />
         </div >
 
     )
