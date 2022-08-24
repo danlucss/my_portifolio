@@ -37,10 +37,10 @@ const About = () => {
             Que procura uma opotunidade para trabalhar com as tecnologias mais modernas e projetos diversificados.
           </p>
           <p align="LEFT">
-            Sou muito curioso, e gosto de aprender coisas novas e desenvolver projetos que me ajudem a crescer.
+            Sou muito curioso e gosto de aprender coisas novas desenvolvendo projetos que me ajudem a crescer.
 
           </p>
-          Se for preciso me definir com poucas palavras, eu sou pai de dois filhos maravilhosos, amo os livros e a poesia. As artes marciais são minha grande paixão. E, claro, sou obsecado por tecnologia!!!
+          Amante de livros e poesias, pai de duas crianças maravilhosas, apaixonado por artes marciais e esportes radicais, escritor, pai dedicado, <i>bon vivant</i>, fanático por tecnólogia e desenvolvimento de softwares.
           <p>
 
           </p>

@@ -69,9 +69,9 @@ const Sidebar = () => {
                         </NavLink>
                     </div>
 
-
-
                 </div>
+
+
             </nav >
 
 
@@ -97,9 +97,9 @@ const Sidebar = () => {
                     </a>
                 </li>
             </ul>
-
-
         </div >
+
+
 
     )
 };

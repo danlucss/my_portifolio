@@ -248,12 +248,23 @@ $blood-color: #f44336;
 
     .menuOpen {
         width: 100%;
-        height: 50vh;
+        height: 100vh;
         background: $ligth-gray-color;
+        animation: heightOpen 1s ease-out;
     }
 
     .menuClose {
+        transition: all 1s ease-out;
         display: none;
+    }
+}
+
+@keyframes heightOpen {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100vh;
     }
 }
 

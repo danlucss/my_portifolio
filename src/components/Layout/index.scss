@@ -16,7 +16,7 @@ html {
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
-    overflow: auto;
+    // overflow: auto;
     opacity: 0;
 
     padding-left: 100px;
@@ -24,9 +24,6 @@ html {
     // margin-right: 30px;
 
     // display: flex;
-
-    gap: 0.5rem;
-    flex-wrap: nowrap;
 }
 
 .container.contact-page,

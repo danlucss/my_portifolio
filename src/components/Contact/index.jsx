@@ -21,13 +21,17 @@ const Contact = () => {
     // Init EmailJs 
     const sendEmail = (e) => {
         e.preventDefault();
+        const message_send = document.querySelector('#message_send');
+        const formi = document.querySelector('#form');
 
         emailjs
             .sendForm('service_xczk3t9', "template_hxqrjrr", form.current, 'kIRbdoqhzQ-zJJufV')
             .then(
                 () => {
-                    alert('SUCCESS!');
-                    window.location.reload(false);
+                    // alert('SUCCESS!');
+
+                    message_send.innerHTML = 'Mensagem enviada com sucesso!';
+                    formi.reset();
                 },
                 (err) => {
                     alert('FAILED...', err);
@@ -60,27 +64,30 @@ const Contact = () => {
 
 
                     <div className='form-zone'>
-                        <form ref={form} onSubmit={sendEmail}>
+                        <form ref={form} onSubmit={sendEmail} id="formi">
                             <ul>
                                 <li className="half">
-                                    <input type="text" name="name" placeholder="Nome"
+                                    <input type="text" name="to_name" id='to_name' placeholder="Nome"
                                         required />
                                 </li>
                                 <li className="half">
-                                    <input type="email" name="email" placeholder="Email"
+                                    <input type="email" name="reply_to" id='reply_to' placeholder="Email"
                                         required />
                                 </li>
                                 <li>
-                                    <input type="text" name="subject" placeholder="Assunto"
+                                    <input type="text" name="subject" placeholder="Assunto" id='subject'
                                         required
                                     />
                                 </li>
                                 <li>
-                                    <textarea name="message" placeholder="Mensagem"
+                                    <textarea name="message" placeholder="Mensagem" id='message'
                                         required />
                                 </li>
                                 <li>
                                     <button className='btn btn__send' type="submit">Enviar</button>
+                                </li>
+                                <li>
+                                    <p id='message_send'></p>
                                 </li>
                             </ul>
                         </form>

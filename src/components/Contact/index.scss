@@ -1,3 +1,7 @@
+.text-zone {
+    width: 60%;
+}
+
 .form-zone {
     width: 100%;
     overflow: hidden;
@@ -57,17 +61,18 @@
 
     textarea {
         width: 100%;
-        padding: 0 10px;
+
         border: none;
         background-color: transparent;
         border-bottom: 1px solid #fff;
         height: 50px;
         font-size: 16px;
-        padding: 20px;
+        padding: 10px;
         box-sizing: border-box;
         min-height: 140px;
-        color: #000;
+        color: rgb(255, 255, 255);
         font-family: "FigTree", sans-serif;
+        transition: all 0.3s ease-in-out;
     }
 
     .btn {
@@ -104,6 +109,8 @@
 
 @media screen and (max-width: 768px) {
     .form-zone {
+        margin: 0;
+        padding: 0;
         width: 100%;
         margin-top: 20px;
         font-family: "Figtree", sans-serif;
