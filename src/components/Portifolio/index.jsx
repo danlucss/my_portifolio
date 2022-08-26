@@ -122,14 +122,14 @@ const Portifolio = () => {
             </div>
 
 
-
+            <Loader type="ball-clip-rotate-multiple" active={true} />
         </>
     )
 
 }
 
 
-<Loader type="ball-clip-rotate-multiple" active={true} />
+
 
 
 
