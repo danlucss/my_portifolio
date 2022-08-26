@@ -98,7 +98,7 @@ const Portifolio = () => {
                     <AnimatedLetters
                         letterClass={letterClass}
                         strArray={'Portfólio'.split('')}
-                        idx={12}
+                        idx={15}
                     />
                 </h1>
                 {/* <div className='btn__container'>
