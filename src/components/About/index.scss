@@ -1,10 +1,8 @@
 .stage-cube-cont {
     width: 50%;
     height: 100%;
-
     padding-top: 8%;
     padding-left: 10%;
-
     // overflow: hidden;
     // overflow: auto;
     color: rgb(241, 241, 241);
@@ -26,7 +24,7 @@
         padding: 50px;
 
         border: 2px solid #fff;
-        background: rgba(255, 255, 255, 0.274);
+        background: rgba(255, 255, 255, 0.562);
         text-align: center;
         font-size: 100px;
         display: flex;
@@ -40,27 +38,27 @@
     .face1 {
         transform: translateZ(100px);
         color: #61dafb;
-        background-color: #000;
+        // background-color: #000;
     }
     .face2 {
         transform: rotateY(90deg) translateZ(100px);
         color: #e34f26;
-        background-color: #000;
+        // background-color: #000;
     }
     .face3 {
         transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
         color: #ccc000;
-        background-color: #000;
+        // background-color: #000;
     }
     .face4 {
         transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
         color: #61d000;
-        background-color: #000;
+        // background-color: #000;
     }
     .face5 {
         transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
         color: #e34f26;
-        background-color: #000;
+        // background-color: #000;
     }
     .face6 {
         transform: rotateX(-90deg) translateZ(100px);

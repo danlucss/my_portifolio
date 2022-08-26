@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { auth, storage, db } from '../../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { collection, getDoc } from 'firebase/firestore/lite';
+import { addDoc, collection, getDoc, getDocs } from 'firebase/firestore/lite';
 
 const Home = () => {
     const form = useRef();
@@ -51,12 +51,12 @@ const Home = () => {
 
     const savePortfolio = async (portfolio) => {
         try {
-            await getDoc(collection(db, 'portfolio'), portfolio);
+            await addDoc(collection(db, 'portfolio'), portfolio);
             alert("Portifolio adicionado com sucesso!");
             window.location.reload(false);
 
         } catch (error) {
-            alert('Failed to add portfolio');
+            console.log(error);
         }
     }
 
