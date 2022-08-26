@@ -67,9 +67,11 @@ const Portifolio = () => {
                                     </h4>
                                     <div className='card__links'>
                                         <button className="btn__action" onClick={() => window.open(project.demoUrl)}>
+                                            Demo
                                             <FaExternalLinkAlt />
                                         </button>
                                         <button className="btn__action" onClick={() => window.open(project.repoUrl)}>
+                                            Repo
                                             <FaGithub />
                                         </button>
                                     </div>
